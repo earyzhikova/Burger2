@@ -1,0 +1,40 @@
+body {
+  background-color: beige;
+}
+img {
+  width: 200px;
+  height: 200px;
+}
+
+h1 {
+  position: center;
+  }
+
+  .btn-primary{
+background-color: grey;  
+border-color: yellow;   
+  }
+
+  .form-control{
+    background-color: white;
+  }
+
+  #newBurgerButton{
+    align-items: center;
+  }
+
+  #eatDaBurger{
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  #addBurger{
+    width:20%;
+  }
+
+  .col-centered{
+    float: none;
+    margin: 0 auto;
+}

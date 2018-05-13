@@ -1,0 +1,72 @@
+
+<div class = "container">
+<div class = "row">
+  <div class="mx-auto"> 
+    <img src="./assets/css/img/burger-image.png" alt="burger">
+    <h2>Eat-Da-Burger!!!</h2>
+  </div>
+
+
+</div>
+</div>
+
+<div class="row">
+      <div class="col-sm-3 mx-auto" align="center">
+        </div>
+	    <div class="col-sm-3 mx-auto">
+
+			<h3>Burgers Available To Eat!</h3>
+
+			  {{#each burgers}}
+			    {{#unless this.devoured}}
+			      
+			      	{{math @index "+" 1}}
+			        {{this.burger_name}}
+
+			        {{!-- <form method="PUT"> --}}
+			          {{!-- <input type="hidden" name="devoured" class='burger_id' value={{this.id}}> --}}
+			          <button class="btn-primary newBurgerDevoured" data-burgerId="{{this.id}}" type="submit">Devour It!</button>
+			        {{!-- </form> --}}
+
+			      <br>
+			    {{/unless}}
+			  {{/each}}
+
+	    </div>
+
+	    <div class="col-sm-6">
+
+			<h3>Burgers That Have Been Eaten!</h3>
+			  {{#each burgers}}
+			    {{#if this.devoured}}
+			      
+              {{!-- <input type="text" class="form-control" placeholder=" --}}
+              {{math @index "+" 1}}
+              {{this.burger_name}}
+              <br>
+              {{!-- "> --}}
+
+			    
+			    {{/if}}
+			  {{/each}}
+			
+	    </div>
+
+  	</div>
+	
+
+	<div class="row">
+	    <div class="mx-auto col-sm-6" align="center" id="addBurgerStyle">
+
+			<h3>Add A Burger!</h3>
+
+<form id="form-add">
+  <div class="form-group">  
+      <input id="addBurger" type="text" class="form-control" data = ""
+    placeholder="ex. Cheeseburger">
+    <br>
+    <button id="newBurgerButton" type="submit" class="btn">Submit</button>
+  </div>
+</form>
+</div>
+</div>
